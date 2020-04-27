@@ -29,4 +29,4 @@ class ToDo(models.Model):
         return '%s >> %s' % (self.author, self.title)
 
     class Meta:
-        verbose_name_plural = "ToDos"
+        verbose_name_plural = "ToDo Items"
