@@ -130,3 +130,4 @@ dmypy.json
 
 # Handmade
 media/
+checknevis/secret.txt
