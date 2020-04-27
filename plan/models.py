@@ -27,3 +27,6 @@ class ToDo(models.Model):
 
     def __str__(self):
         return '%s >> %s' % (self.author, self.title)
+
+    class Meta:
+        verbose_name_plural = "ToDos"
