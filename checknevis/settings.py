@@ -20,7 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ku86@s9jvo62nsf1wpj9+8ez3t*geme+me9^jzngldxax_yjb3'
+with open(os.path.join(BASE_DIR, 'checknevis/secret.txt')) as sec:
+    SECRET_KEY = sec.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -122,7 +123,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
+# try:
+#    from .local_settings import *
+# except ImportError:
+#    pass
