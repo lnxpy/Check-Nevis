@@ -1,0 +1,17 @@
+asgiref==3.2.7
+astroid==2.3.3
+autopep8==1.5.2
+Django==3.0.5
+django-jalali==3.3.0
+djangorestframework==3.11.0
+isort==4.3.21
+jdatetime==3.6.2
+lazy-object-proxy==1.4.3
+mccabe==0.6.1
+Pillow==7.1.2
+pycodestyle==2.5.0
+pylint==2.4.4
+pytz==2019.3
+six==1.14.0
+sqlparse==0.3.1
+wrapt==1.11.2
