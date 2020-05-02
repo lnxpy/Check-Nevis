@@ -5,6 +5,8 @@ from .serializers import ToDoSerializer, ProfileSerializer, UserSerializer, Them
 from django.contrib.auth.models import User
 
 from django.http import HttpResponse
+from rest_framework.response import Response
+from rest_framework import status
 
 
 # Visual side
@@ -31,6 +33,6 @@ class ThemeAPIView(generics.ListCreateAPIView):
     serializer_class = ThemeSerializer
 
 
-class UserAPIView(generics.ListCreateAPIView):
+class UserAPIView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
