@@ -10,6 +10,6 @@ urlpatterns = [
     path('api/theme', views.ThemeAPIView.as_view(), name='theme'),
     path('api/user', views.UserAPIView.as_view(), name='user'),
 
-    path('api-auth/', include('rest_framework.urls')),
+    path('api/api-auth/', include('rest_framework.urls')),
     path('api/', include('rest_auth.urls')),
 ]
