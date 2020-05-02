@@ -7,6 +7,7 @@ class Profile(models.Model):
 
     username = models.OneToOneField(User, on_delete=models.DO_NOTHING)
     avatar = models.ImageField(upload_to='avatars', blank=True)
+    name = models.CharField(max_length=20)
 
     def __str__(self):
         return str(self.username)
