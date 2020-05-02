@@ -4,9 +4,16 @@ from rest_framework import generics
 from .serializers import ToDoSerializer, ProfileSerializer, UserSerializer, ThemeSerializer
 from django.contrib.auth.models import User
 
+from django.http import HttpResponse
+
+
+# Visual side
 
 def home(request):
-    return render(request, 'index.html', {})
+    # return render(request, 'index.html', {})
+    return HttpResponse('This is homepage')
+
+# API side
 
 
 class ToDoAPIView(generics.ListCreateAPIView):
