@@ -41,7 +41,7 @@ THEMES = [
 
 class Theme(models.Model):
 
-    username = models.OneToOneField(Profile, on_delete=models.CASCADE)
+    username = models.ForeignKey(Profile, on_delete=models.CASCADE)
     language = models.CharField(choices=LANGUAGES, max_length=50)
     theme = models.CharField(choices=THEMES, max_length=50)
 
