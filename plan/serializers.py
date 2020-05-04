@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class ToDoSerializer(serializers.ModelSerializer):
     class Meta:
         model = ToDo
-        fields = ('title', 'author', 'content')
+        fields = ('id', 'title', 'author', 'content')
 
 
 class ProfileSerializer(serializers.ModelSerializer):
@@ -28,7 +28,6 @@ class UserSerializer(serializers.ModelSerializer):
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
-        print(validated_data)
         user = User.objects.create_user(**validated_data)
         Profile.objects.create(username=user)
         return user
