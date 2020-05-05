@@ -12,13 +12,13 @@ class ToDoSerializer(serializers.ModelSerializer):
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
-        fields = ('username', 'avatar', 'name')
+        fields = ('id', 'avatar', 'name')
 
 
 class ThemeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Theme
-        fields = ('username', 'language', 'theme')
+        fields = ('id', 'username', 'language', 'theme')
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -30,4 +30,5 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
         Profile.objects.create(username=user)
+        Theme.objects.create(username=user)
         return user

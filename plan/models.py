@@ -15,7 +15,7 @@ class Profile(models.Model):
 
 class ToDo(models.Model):
 
-    author = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    author = models.ForeignKey(Profile, on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=100)
     content = models.TextField()
     date = jmodels.jDateTimeField(auto_now=True, blank=False)
@@ -41,7 +41,7 @@ THEMES = [
 
 class Theme(models.Model):
 
-    username = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    username = models.ForeignKey(Profile, on_delete=models.DO_NOTHING)
     language = models.CharField(choices=LANGUAGES, max_length=50)
     theme = models.CharField(choices=THEMES, max_length=50)
 
