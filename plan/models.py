@@ -42,8 +42,8 @@ THEMES = [
 class Theme(models.Model):
 
     username = models.ForeignKey(Profile, on_delete=models.DO_NOTHING)
-    language = models.CharField(choices=LANGUAGES, max_length=50)
-    theme = models.CharField(choices=THEMES, max_length=50)
+    language = models.CharField(choices=LANGUAGES, max_length=50, default='fa')
+    theme = models.CharField(choices=THEMES, max_length=50, default='blue')
 
     def __str__(self):
         return str(self.username)
