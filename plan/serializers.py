@@ -29,6 +29,6 @@ class UserSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
-        Profile.objects.create(username=user)
-        Theme.objects.create(username=user)
+        user_profile = Profile.objects.create(username=user)
+        Theme.objects.create(user_profile)
         return user
