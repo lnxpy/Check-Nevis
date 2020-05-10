@@ -24,11 +24,11 @@ class ThemeSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'username', 'password')
+        fields = ('username', 'password')
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
-        user_profile = Profile.objects.create(username=user)
-        Theme.objects.create(user_profile)
+        user_prof = Profile.objects.create(username=user)
+        Theme.objects.create(username=user_prof)
         return user
