@@ -31,13 +31,17 @@ class ToDoAPIView(generics.ListCreateAPIView):
     queryset = models.ToDo.objects.all()
 
     def get(self, request, format=None):
-        todo_items = models.ToDo.objects.filter(author=request.user.id)
+        user_profile = models.Profile.objects.get(username=request.user.id)
+        todo_items = models.ToDo.objects.filter(author=user_profile.id)
         serializer = ToDoSerializer(todo_items, many=True)
         return Response(serializer.data)
 
     def post(self, request, format=None):
         data = request.data.copy()
-        data['author'] = request.user.id
+
+        user_profile = models.Profile.objects.get(username=request.user.id)
+        data['author'] = user_profile.id
+
         serializer = ToDoSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
@@ -106,8 +110,8 @@ class ThemeAPIView(generics.RetrieveUpdateAPIView):
     serializer_class = (ThemeSerializer)
     queryset = models.Theme.objects.all()
 
-    # THIS IS PROBLEM
-
+    # This part has some problems
+    # Obvously DOES NOT WORK!
 
     def get_object(self, username):
         try:
