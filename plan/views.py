@@ -113,9 +113,6 @@ class ThemeAPIView(generics.RetrieveUpdateAPIView):
     serializer_class = (ThemeSerializer)
     queryset = models.Theme.objects.all()
 
-    # This part has some problems
-    # Obvously DOES NOT WORK!
-
     def get_object(self, username):
         try:
             return models.Theme.objects.get(username=username)
