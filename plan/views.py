@@ -60,14 +60,16 @@ class ToDoDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
             raise Http404
 
     def get(self, request, pk, format=None):
-        todo_item = models.ToDo.objects.filter(id=pk, author=request.user.id)
+        user_profile = models.Profile.objects.get(username=request.user.id)
+        todo_item = models.ToDo.objects.filter(id=pk, author=user_profile.id)
         serializer = ToDoSerializer(todo_item, many=True)
         return Response(serializer.data)
 
     def put(self, request, pk, format=None):
-        todo_item = self.get_object(pk, request.user.id)
+        user_profile = models.Profile.objects.get(username=request.user.id)
+        todo_item = self.get_object(pk, user_profile.id)
         data = request.data.copy()
-        data['author'] = request.user.id
+        data['author'] = user_profile.id
         serializer = ToDoSerializer(todo_item, data=data)
         if serializer.is_valid():
             serializer.save()
@@ -75,7 +77,8 @@ class ToDoDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, pk, format=None):
-        todo_item = self.get_object(pk, request.user.id)
+        user_profile = models.Profile.objects.get(username=request.user.id)
+        todo_item = self.get_object(pk, user_profile.id)
         todo_item.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
