@@ -118,19 +118,21 @@ class ThemeAPIView(generics.RetrieveUpdateAPIView):
 
     def get_object(self, username):
         try:
-            return models.Theme.objects.get(username=5)
+            return models.Theme.objects.get(username=username)
         except models.Theme.DoesNotExist:
             raise Http404
 
     def get(self, request, format=None):
-        theme = models.Theme.objects.filter(username=request.user.id)
+        user_profile = models.Profile.objects.get(username=request.user.id)
+        theme = models.Theme.objects.filter(username=user_profile.id)
         serializer = ThemeSerializer(theme, many=True)
         return Response(serializer.data)
 
     def put(self, request, format=None):
-        theme = self.get_object(request.user.id)
+        user_profile = models.Profile.objects.get(username=request.user.id)
+        theme = self.get_object(user_profile.id)
         data = request.data.copy()
-        data['username'] = request.user.id
+        data['username'] = user_profile.id
         serializer = ThemeSerializer(theme, data=data)
         if serializer.is_valid():
             serializer.save()
