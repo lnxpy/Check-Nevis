@@ -14,8 +14,8 @@ from django.http import HttpResponse
 # Visual side
 
 def home(request):
-    # return render(request, 'index.html', {})
-    return HttpResponse('This is homepage')
+    return render(request, 'index.html', {})
+
 
 # API side
 
