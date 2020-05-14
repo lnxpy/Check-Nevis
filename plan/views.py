@@ -8,7 +8,6 @@ from .permissions import AnybodyIsAble
 from rest_framework.response import Response
 from rest_framework import status
 from django.http import Http404
-from django.http import HttpResponse
 
 
 # Visual side
