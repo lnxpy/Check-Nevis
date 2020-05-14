@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/vazir/Without-Latin/Vazir-WOL.eot');
+    src: url('../fonts/vazir/Without-Latin/Vazir-WOL.eot') format('embedded-opentype'),
+        url('../fonts/vazir/Without-Latin/Vazir-WOL.woff2') format('woff2'),
+        url('../fonts/vazir/Without-Latin/Vazir-WOL.woff') format('woff'),
+        url('../fonts/vazir/Without-Latin/Vazir-WOL.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {}
+
+* {
+    font-family: Vazir;
+}
