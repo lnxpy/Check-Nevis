@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class ToDoSerializer(serializers.ModelSerializer):
     class Meta:
         model = ToDo
-        fields = ('id', 'title', 'author', 'content')
+        fields = ('id', 'title', 'author', 'content', 'done')
 
 
 class ProfileSerializer(serializers.ModelSerializer):
