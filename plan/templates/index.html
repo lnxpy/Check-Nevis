@@ -7,17 +7,51 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="{% static 'css/bootstrap-rtl.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
+    <link rel="stylesheet" href="{% static 'css/bootstrap-rtl.min.css' %}">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <title>چک&nbsp;نویس</title>
+    <title>چک نویس</title>
 </head>
 
 <body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h2 class="display">چک نویس <span class="badge">شدیدا در حال توسعه</span> <span class="badge">از
+                    <a class="badge-link" href="https://github.com/lnxpy/check-nevis" target="_blank">اینجا</a> دنبال
+                    کنید</span>
+            </h2>
+            <p class="lead">یووهوو..!! شما در محیط توسعه قرار دارید!<br><span class="text-success">سرور شما در حالت
+                    Deploy قرار دارد.
+                </span></p>
+        </div>
+    </div>
+    <div class="container text-center block-center">
+        <div class="row">
+            <h3>API End-points</h3>
+            <br>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <ul class="list-group">
+                    <li class="list-group-item"><span class="badge">ساخت کاربر جدید</span><code>api/user</code></li>
+                    <li class="list-group-item"><span class="badge">ورود به سیستم</span><code>api/login</code></li>
+                    <li class="list-group-item"><span class="badge">خارج شدن از سیستم</span><code>api/logout</code></li>
+                    <li class="list-group-item"><span class="badge">مشاهده / ساخت فعالیت ها</span><code>api/todo</code>
+                    </li>
+                    <li class="list-group-item"><span class="badge">مشاهده / تغییر فعالیت</span><code>api/todo/ID</code>
+                    </li>
+                    <li class="list-group-item"><span class="badge">مشاهده و تغییر
+                            پروفایل</span><code>api/profile</code></li>
+                    <li class="list-group-item"><span class="badge">مشاهده و تغییر تم</span><code>api/theme</code></li>
+                </ul>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
     <!-- Latest compiled and minified JavaScript -->
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.4.1.slim.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
 </body>
 
 </html>
