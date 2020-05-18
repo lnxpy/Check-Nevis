@@ -9,14 +9,4 @@
     font-style: normal;
 }
 
-body {
-    font-family: Vazir;
-}
-
-.badge-link {
-    color: white;
-}
-
-.badge-link:hover {
-    color: rgb(211, 211, 211);
-}
+body {}
