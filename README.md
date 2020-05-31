@@ -20,15 +20,15 @@ Here we have the steps you need to do to set this service up.
 Now, you've already installed Check Nevis on your local system. In spite on the browsed page all API endpoints listed, you can use the following chart to access to endpoints.
 
 
-| API           |      Methods     |         Descryption         |  CRUD Style |
-| :-----------: | :--------------: | :-------------------------: | :---------: |
-| api/user      |       `POST`       | To create new user          |       C     |
-| api/login     |       `POST`       | To Login as a user          |       C     |
-| api/logout    |       `POST`       | To Logout as a user         |       C     |
-| api/todo      |    `GET, POST`     | To create and list todos    |     C, R    |
-| api/todo/ID   | `GET, PUT, DELETE` | To modify a specific a todo |   R, D, U   |
-| api/them      |      `GET,PUT`     | To get and change theme     |     R, U    |
-| api/profile   |      `GET,PUT`     | To get and change profile   |     R, U    |
+| API           |       Methods      |          Descryption         |  CRUD Style |
+| :-----------: | :----------------: | :--------------------------: | :---------: |
+| api/user      |       `POST`       | To create new user           |       C     |
+| api/login     |       `POST`       | To Login as a user           |       C     |
+| api/logout    |       `POST`       | To Logout as a user          |       C     |
+| api/todo      |    `GET, POST`     | To create and list todos     |     C, R    |
+| api/todo/ID   | `GET, PUT, DELETE` | To modify a specific a todo  |   R, D, U   |
+| api/them      |      `GET,PUT`     | To get and change theme      |     R, U    |
+| api/profile   |      `GET,PUT`     | To get and change profile    |     R, U    |
 
 ### Original Interface
 __Contents will be updated__
