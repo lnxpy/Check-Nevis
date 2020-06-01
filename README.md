@@ -11,11 +11,11 @@ All endpoints will be listed once you build this project up.
 
 ### Build
 Here we have the steps you need to do to set this service up.
-. Clone Check Nevis
-. Make `virtualenv` as you wish
-. Activate your environment and install `requirements.txt` file
-. Migrate all changes on DB
-. Run this up and browse `localhost:8000`
+- Clone Check Nevis
+- Make `virtualenv` as you wish
+- Activate your environment and install `requirements.txt` file
+- Migrate all changes on DB
+- Run this up and browse `localhost:8000`
 
 Now, you've already installed Check Nevis on your local system. In spite on the browsed page all API endpoints listed, you can use the following chart to access to endpoints.
 
