@@ -21,7 +21,7 @@ Pillow==7.1.2
 prompt-toolkit==3.0.5
 ptyprocess==0.6.0
 pycodestyle==2.5.0
-Pygments==2.6.1
+Pygments==2.7.4
 pylint==2.4.4
 pytz==2019.3
 six==1.14.0
