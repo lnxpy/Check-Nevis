@@ -3,7 +3,7 @@ astroid==2.3.3
 autopep8==1.5.2
 backcall==0.1.0
 decorator==4.4.2
-Django==3.0.5
+Django==3.0.12
 django-jalali==3.3.0
 django-rest-auth==0.9.5
 djangorestframework==3.11.0
